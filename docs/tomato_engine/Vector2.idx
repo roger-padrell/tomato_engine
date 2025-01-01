@@ -1,0 +1,22 @@
+nimTitle	Vector2	tomato_engine/Vector2.html	module src/tomato_engine/Vector2		0
+nim	Vector2	tomato_engine/Vector2.html#Vector2	tuple Vector2		4
+nim	Add	tomato_engine/Vector2.html#Add,Vector2,Vector2	proc Add(a: Vector2; b: Vector2): Vector2		21
+nim	Divide	tomato_engine/Vector2.html#Divide,Vector2,float	proc Divide(a: Vector2; n: float): Vector2		30
+nim	Multiply	tomato_engine/Vector2.html#Multiply,Vector2,float	proc Multiply(a: Vector2; n: float): Vector2		35
+nim	Subtract	tomato_engine/Vector2.html#Subtract,Vector2,Vector2	proc Subtract(a: Vector2; b: Vector2): Vector2		38
+nim	Equals	tomato_engine/Vector2.html#Equals,Vector2,Vector2	proc Equals(a: Vector2; b: Vector2): bool		41
+nim	Dot	tomato_engine/Vector2.html#Dot,Vector2,Vector2	proc Dot(a: Vector2; b: Vector2): float		47
+nim	down	tomato_engine/Vector2.html#down	proc down(): Vector2		51
+nim	left	tomato_engine/Vector2.html#left	proc left(): Vector2		54
+nim	right	tomato_engine/Vector2.html#right	proc right(): Vector2		57
+nim	up	tomato_engine/Vector2.html#up	proc up(): Vector2		60
+nim	one	tomato_engine/Vector2.html#one	proc one(): Vector2		63
+nim	zero	tomato_engine/Vector2.html#zero	proc zero(): Vector2		66
+nim	negativeInfinity	tomato_engine/Vector2.html#negativeInfinity	proc negativeInfinity(): Vector2		69
+nim	positiveInfinity	tomato_engine/Vector2.html#positiveInfinity	proc positiveInfinity(): Vector2		72
+nim	magnitude	tomato_engine/Vector2.html#magnitude,Vector2	proc magnitude(a: Vector2): float		76
+nim	normalized	tomato_engine/Vector2.html#normalized,Vector2	proc normalized(a: Vector2): Vector2		79
+nim	this	tomato_engine/Vector2.html#this,Vector2	proc this(a: Vector2): array[2, float]		83
+nim	ToString	tomato_engine/Vector2.html#ToString,Vector2	proc ToString(a: Vector2): string		87
+heading	Vector2	tomato_engine/Vector2.html#vector2	 Vector2		0
+heading	Create a Vector2	tomato_engine/Vector2.html#create-a-vector2	 Create a Vector2		0
