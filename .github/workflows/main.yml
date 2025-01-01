@@ -1,0 +1,23 @@
+name: Generate documentation
+
+on:
+  push:
+    branches:
+      - main  # Triggers on push to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Make docs.sh executable if necessary
+      - name: Make docs.sh executable
+        run: chmod +x ./docs.sh
+
+      # Run the docs.sh script
+      - name: Run docs.sh
+        run: ./docs.sh
