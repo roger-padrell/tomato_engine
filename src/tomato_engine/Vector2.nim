@@ -28,6 +28,11 @@ proc Add*(a: Vector2, b: Vector2): Vector2 =
   (x: a.x + b.x, y: a.y + b.y)
 
 proc Divide*(a: Vector2, n: float): Vector2 = 
+  ## Divide a Vector2 by a number
+  ## ```
+  ## const a: Vector2 = (4,4)
+  ## echo a.Divide(2) # (2,2)
+  ## ```
   if n==0:
     return a;
   (a.x/n, a.y/n);
