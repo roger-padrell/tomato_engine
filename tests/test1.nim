@@ -1,9 +1,6 @@
 import tomato_engine
 
-var a: Vector2 = (0,1);
-const b: Vector2 = (1,0);
-echo  a.Add(b);
+const a: Vector2 = (1,3);
+const b: Vector2 = (3,1)
 
-a = (0,2);
-
-echo a.ToString();
+echo a.Max(b);

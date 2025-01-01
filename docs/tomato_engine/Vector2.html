@@ -54,6 +54,9 @@
   <li><a class="reference" id="vector2_toc" href="#vector2">Vector2</a></li>
 <li><a class="reference" id="create-a-vector2_toc" href="#create-a-vector2">Create a Vector2</a></li>
 <li>
+  <a class="reference reference-toplevel" href="#6" id="56">Imports</a>
+</li>
+<li>
   <details open>
     <summary><a class="reference reference-toplevel" href="#7" id="57">Types</a></summary>
     <ul class="simple simple-toc-section">
@@ -68,6 +71,10 @@
     <ul class="simple simple-toc-section">
       <ul class="simple nested-toc-section">Add
   <li><a class="reference" href="#Add%2CVector2%2CVector2" title="Add(a: Vector2; b: Vector2): Vector2">Add(a: Vector2; b: Vector2): Vector2</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">Distance
+  <li><a class="reference" href="#Distance%2CVector2%2CVector2" title="Distance(a: Vector2; b: Vector2): float">Distance(a: Vector2; b: Vector2): float</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">Divide
@@ -92,6 +99,14 @@
 </ul>
 <ul class="simple nested-toc-section">magnitude
   <li><a class="reference" href="#magnitude%2CVector2" title="magnitude(a: Vector2): float">magnitude(a: Vector2): float</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">Max
+  <li><a class="reference" href="#Max%2CVector2%2CVector2" title="Max(a: Vector2; b: Vector2): Vector2">Max(a: Vector2; b: Vector2): Vector2</a></li>
+
+</ul>
+<ul class="simple nested-toc-section">Min
+  <li><a class="reference" href="#Min%2CVector2%2CVector2" title="Min(a: Vector2; b: Vector2): Vector2">Min(a: Vector2; b: Vector2): Vector2</a></li>
 
 </ul>
 <ul class="simple nested-toc-section">Multiply
@@ -130,6 +145,10 @@
   <li><a class="reference" href="#ToString%2CVector2" title="ToString(a: Vector2): string">ToString(a: Vector2): string</a></li>
 
 </ul>
+<ul class="simple nested-toc-section">unsignedAngle
+  <li><a class="reference" href="#unsignedAngle%2CVector2%2CVector2" title="unsignedAngle(a: Vector2; b: Vector2): float">unsignedAngle(a: Vector2; b: Vector2): float</a></li>
+
+</ul>
 <ul class="simple nested-toc-section">up
   <li><a class="reference" href="#up" title="up(): Vector2">up(): Vector2</a></li>
 
@@ -157,7 +176,13 @@
 
 <h1><a class="toc-backref" id="create-a-vector2" href="#create-a-vector2">Create a Vector2</a></h1><p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="DecNumber">1</span><span class="Punctuation">)</span> <span class="Comment"># X: 1, Y:1</span></pre></p>
 </p>
-    <div class="section" id="7">
+    <div class="section" id="6">
+  <h1><a class="toc-backref" href="#6">Imports</a></h1>
+  <dl class="item">
+    <a class="reference external" href="utils.html">utils</a>
+  </dl>
+</div>
+<div class="section" id="7">
   <h1><a class="toc-backref" href="#7">Types</a></h1>
   <dl class="item">
     <div id="Vector2">
@@ -189,6 +214,21 @@
 </div>
 
 </div>
+<div id="Distance-procs-all">
+  <div id="Distance,Vector2,Vector2">
+  <dt><pre><span class="Keyword">proc</span> <a href="#Distance%2CVector2%2CVector2"><span class="Identifier">Distance</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <p>Returns the distance between a and b.</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Distance</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># 2.82842712474619</span></pre></p>
+
+    
+  </dd>
+</div>
+
+</div>
 <div id="Divide-procs-all">
   <div id="Divide,Vector2,float">
   <dt><pre><span class="Keyword">proc</span> <a href="#Divide%2CVector2%2Cfloat"><span class="Identifier">Divide</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
@@ -208,7 +248,11 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#Dot%2CVector2%2CVector2"><span class="Identifier">Dot</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Returns the Dot product between two Vector2</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Dot</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># 24.0</span></pre></p>
+
     
   </dd>
 </div>
@@ -230,7 +274,14 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#Equals%2CVector2%2CVector2"><span class="Identifier">Equals</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">bool</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Check if two Vector2 are identic</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Equals</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># false</span></pre> or</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Equals</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># true</span></pre></p>
+
     
   </dd>
 </div>
@@ -252,7 +303,40 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#magnitude%2CVector2"><span class="Identifier">magnitude</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
+    <p>Returns the magnitude/lenght of the Vector2</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">magnitude</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># 5.656854249492381</span></pre></p>
+
     
+  </dd>
+</div>
+
+</div>
+<div id="Max-procs-all">
+  <div id="Max,Vector2,Vector2">
+  <dt><pre><span class="Keyword">proc</span> <a href="#Max%2CVector2%2CVector2"><span class="Identifier">Max</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <p>Returns a vector that is made from the largest components of two vectors.</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Max</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># (3,3);</span></pre></p>
+
+    
+  </dd>
+</div>
+
+</div>
+<div id="Min-procs-all">
+  <div id="Min,Vector2,Vector2">
+  <dt><pre><span class="Keyword">proc</span> <a href="#Min%2CVector2%2CVector2"><span class="Identifier">Min</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    <p>Returns a vector that is made from the smallest components of two vectors.</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">1</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">1</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Min</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># (1,1);</span></pre></p>
+
     
   </dd>
 </div>
@@ -263,7 +347,10 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#Multiply%2CVector2%2Cfloat"><span class="Identifier">Multiply</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">n</span><span class="Other">:</span> <span class="Identifier">float</span><span class="Other">)</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Multiply a Vector2 by a number</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">,</span><span class="DecNumber">2</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Multiply</span><span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">)</span> <span class="Comment"># (4,4)</span></pre></p>
+
     
   </dd>
 </div>
@@ -285,7 +372,12 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#normalized%2CVector2"><span class="Identifier">normalized</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Returns a Vector2 with a magnitude of 1 but with the same direction</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">6</span><span class="Punctuation">,</span><span class="DecNumber">2</span><span class="Punctuation">)</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">normalized</span><span class="Punctuation">(</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">b</span> <span class="Comment"># (x: 0.9486832980505138, y: 0.3162277660168379)</span>
+<span class="Identifier">echo</span> <span class="Identifier">b</span><span class="Operator">.</span><span class="Identifier">magnitude</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># 0.99999999 = 1</span></pre></p>
+
     
   </dd>
 </div>
@@ -330,7 +422,11 @@
     <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Subtract two Vector2</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">4</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span>
+<span class="Keyword">const</span> <span class="Identifier">b</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">3</span><span class="Punctuation">)</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">Subtract</span><span class="Punctuation">(</span><span class="Identifier">b</span><span class="Punctuation">)</span> <span class="Comment"># (1,1)</span></pre></p>
+
     
   </dd>
 </div>
@@ -341,7 +437,11 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#this%2CVector2"><span class="Identifier">this</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">array</span><span class="Other">[</span><span class="DecNumber">2</span><span class="Other">,</span> <span class="Identifier">float</span><span class="Other">]</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
-    
+    <p>Get the vector as an array of [x,y]</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">2</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">this</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">[</span><span class="DecNumber">0</span><span class="Punctuation">]</span> <span class="Comment"># 2</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">this</span><span class="Punctuation">(</span><span class="Punctuation">)</span><span class="Punctuation">[</span><span class="DecNumber">1</span><span class="Punctuation">]</span> <span class="Comment"># 4</span></pre></p>
+
     
   </dd>
 </div>
@@ -352,7 +452,22 @@
   <dt><pre><span class="Keyword">proc</span> <a href="#ToString%2CVector2"><span class="Identifier">ToString</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">string</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
   <dd>
     
+    <p>Returns a formatted string with the values</p>
+<p><pre class="listing"><span class="Keyword">const</span> <span class="Identifier">a</span><span class="Punctuation">:</span> <span class="Identifier">Vector2</span> <span class="Operator">=</span> <span class="Punctuation">(</span><span class="DecNumber">3</span><span class="Punctuation">,</span><span class="DecNumber">4</span><span class="Punctuation">)</span><span class="Punctuation">;</span>
+<span class="Identifier">echo</span> <span class="Identifier">a</span><span class="Operator">.</span><span class="Identifier">ToString</span><span class="Punctuation">(</span><span class="Punctuation">)</span> <span class="Comment"># &quot;x: 3, y: 4&quot;</span></pre></p>
+
     
+  </dd>
+</div>
+
+</div>
+<div id="unsignedAngle-procs-all">
+  <div id="unsignedAngle,Vector2,Vector2">
+  <dt><pre><span class="Keyword">proc</span> <a href="#unsignedAngle%2CVector2%2CVector2"><span class="Identifier">unsignedAngle</span></a><span class="Other">(</span><span class="Identifier">a</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">;</span> <span class="Identifier">b</span><span class="Other">:</span> <a href="Vector2.html#Vector2"><span class="Identifier">Vector2</span></a><span class="Other">)</span><span class="Other">:</span> <span class="Identifier">float</span> {.<span><span class="Other pragmadots">...</span></span><span class="pragmawrap"><span class="Identifier">raises</span><span class="Other">:</span> <span class="Other">[</span><span class="Identifier">ValueError</span><span class="Other">]</span><span class="Other">,</span>
+    <span class="Identifier">tags</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span><span class="Other">,</span> <span class="Identifier">forbids</span><span class="Other">:</span> <span class="Other">[</span><span class="Other">]</span></span>.}</pre></dt>
+  <dd>
+    
+    Gets the unsigned angle in degrees between from and to.
     
   </dd>
 </div>
@@ -390,7 +505,7 @@
       <div class="twelve-columns footer">
         <span class="nim-sprite"></span>
         <br>
-        <small style="color: var(--hint);">Made with Nim. Generated: 2025-01-01 11:39:30 UTC</small>
+        <small style="color: var(--hint);">Made with Nim. Generated: 2025-01-01 18:52:00 UTC</small>
       </div>
     </div>
   </div>

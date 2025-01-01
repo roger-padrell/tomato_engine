@@ -1,0 +1,2 @@
+nimTitle	utils	tomato_engine/utils.html	module src/tomato_engine/utils		0
+nim	acos	tomato_engine/utils.html#acos,float	proc acos(x: float): float		4
