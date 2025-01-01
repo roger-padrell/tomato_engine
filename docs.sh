@@ -1,5 +1,5 @@
 # Remove previous documentation
-rm -rf /docs/{*,.*}
+rm -rf docs/*
 # Generate documentation
 nim doc --project --index:on --outdir:docs src/tomato_engine.nim
 # Copy readme to docs
